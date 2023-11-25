@@ -1,6 +1,7 @@
 {
     "workbench.colorTheme": "GitHub Dark",
-    "editor.wordWrap": "bounded"
+    "editor.wordWrap": "bounded",
+    "editor.mouseWheelZoom": true
 }
 
 
