@@ -27,9 +27,53 @@ tinderUser.isLoggedIn = false
  }
 
  const obj2 = {
-    1 : "a",
-    2 : "b"
+    3 : "c",
+    4 : "d"
  }
 
- const obj3 = {obj1, obj2} // this will not combine instead return object inside object
-console.log(obj3);
+ //const obj3 = {obj1, obj2} // this will not combine instead return object inside object
+
+ //const obj4 = Object.assign(obj1, obj2) 
+ //console.log(obj4); // { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
+//console.log(obj3);
+ const obj5 = Object.assign({}, obj1, obj2)
+ //console.log(obj1); // now obj1 is not a source so values will not be copied in obj1 
+ 
+ //console.log(obj5); // it will print the same thing as the obj4 but this is generally recommended syntax 
+
+// agar hum ek empty array nahi denge {},  toh iska matlab hai ki sari values obj1 mei jaa rhi hai 
+// toh empty array dene se na vo target ban jata hai toh baki sari values usme chali jati hai
+// for more read on docs about assign 
+
+const obj6 = {...obj1, ...obj2} // spread operator is mostly used to merge the two objects 
+//console.log(obj6);
+// array of objects 
+const users = [
+   {
+      id : 1,
+      email : "ah@gmail.com" 
+   },
+   {
+
+   }, 
+   {
+
+   }
+]
+
+// so we can access it as 
+users[0].email // as this is array but at index 0 it is object so we can accesss via further using dot
+
+console.log(tinderUser);
+console.log(Object.keys(tinderUser)); // gives all keys of the object, it returns all keys in an array 
+
+console.log(Object.values(tinderUser)); // returns all the values of the object as an array
+
+console.log(Object.entries(tinderUser)); // returns all the key value pairs as an array where the 0 index is key and 1 index is array 
+
+console.log(tinderUser.hasOwnProperty('isLoggedIn')); // returns true as this property exists
+
+console.log(tinderUser.hasOwnProperty('isLogged')); // returns false as this property do not exists
+
+
+
