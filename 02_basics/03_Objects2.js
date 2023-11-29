@@ -64,16 +64,59 @@ const users = [
 // so we can access it as 
 users[0].email // as this is array but at index 0 it is object so we can accesss via further using dot
 
-console.log(tinderUser);
-console.log(Object.keys(tinderUser)); // gives all keys of the object, it returns all keys in an array 
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser)); // gives all keys of the object, it returns all keys in an array 
 
-console.log(Object.values(tinderUser)); // returns all the values of the object as an array
+// console.log(Object.values(tinderUser)); // returns all the values of the object as an array
 
-console.log(Object.entries(tinderUser)); // returns all the key value pairs as an array where the 0 index is key and 1 index is array 
+// console.log(Object.entries(tinderUser)); // returns all the key value pairs as an array where the 0 index is key and 1 index is array 
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn')); // returns true as this property exists
+// console.log(tinderUser.hasOwnProperty('isLoggedIn')); // returns true as this property exists
 
-console.log(tinderUser.hasOwnProperty('isLogged')); // returns false as this property do not exists
+// console.log(tinderUser.hasOwnProperty('isLogged')); // returns false as this property do not exists
+
+const course = {
+   courseName : "JEE Advanced",
+   price : "999",
+   courseInstructor : "Rajat"
+}
+
+//destructuring
+
+console.log(course.courseInstructor); // ab gara hume course instructor print karna ho baar baar toh itna bade kyu likhe, instead use 
+
+// const {courseInstructor} = course
+// console.log(courseInstructor); // this will print the same 
+
+// even if we feel the name is tooo long we can ourself give a name
+const {courseInstructor : instructor} = course
+console.log(instructor); // this will also print the same name i.e. Rajat
+
+// API AND JSON
+
+// jabhi bhi hum api call karte hai toh vo json format mei hota hai pehle vo xml mei hota tha 
+//json is nothing but it looks like a object
+
+//json 
+{
+   "name" : "Rajat",
+   "coursename" : "JEE Advanced",
+   "price" : "free"
+}
+
+// json can also be array of objects
+[
+   {},
+   {},
+   {},
+]
+
+//we will learn more about json and api later
+
+
+
+
+
 
 
 
