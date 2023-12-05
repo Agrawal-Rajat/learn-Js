@@ -1,0 +1,22 @@
+JavaScript execution context
+
+1.global execution context
+2.functional execution context
+3.eval execution context
+
+javascript ka code 2 phases mei run hota hai
+1.memory OR creation phase ==> isme jo bhi variables ya functions ys operations likhe hai unhe bas space allocat ki jati hai, unhe execute nahi kiya javascript
+
+2. execution phase ==> isme code aur operations execute hote hai
+
+
+sabse pehle jo bhi code run hota hai usse global execution se run kiya jata hai aur usse sabse pehle this se allocate karte hai
+
+phir memory phase mei sare vraibales ke naam liye jate hai aur unme undefined rakha jata hai. aur functions ke case mei function ki defination 
+iss ko bolte hai first cycle 
+
+ab hoga second cycle 
+isme sabhi variables mei value store hoti hai jo given ho. jab hum kisi function ko approach karte hai ya function ko variabke mei store karte hai toh vo apna alag execution context banata hai.
+iss new execution context mei bnaega ek new variable environment aur ek execution thread
+ab vapis dono phase honge, jitne baar bhi function call hoga utne baar na naya box banega aur dono phase run honge 
+phir jo bhi return hoga vo global execution mei return hoga , aur ek baar ye ho jane ke baad ye box delete ho jayega function call vala 
